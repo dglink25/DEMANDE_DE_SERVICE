@@ -1,0 +1,15 @@
+{
+    "name": "logbo-maurel/dglink",
+    "autoload": {
+        "psr-4": {
+            "LogboMaurel\\Dglink\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "LOGBO Maurel",
+            "email": "logbomaurel@gmail.com"
+        }
+    ],
+    "require": {}
+}
