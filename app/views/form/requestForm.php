@@ -17,6 +17,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Demande de Service - DGLINK</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Important pour mobile -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     body {
@@ -38,6 +39,67 @@
       margin-top: 25px; margin-bottom: 10px;
       border-bottom: 2px solid #0056b3; display: inline-block; padding-bottom: 3px;
     }
+    /* ✅ Améliorations Mobile */
+@media (max-width: 576px) {
+    body {
+        padding: 10px;
+        background: #f5f7fa;
+    }
+
+    .card {
+        margin: 0;
+        border-radius: 8px;
+    }
+
+    /* Header avec logos */
+    .card-header {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .card-header img {
+        height: 60px;
+        width: 60px;
+        margin: 5px 0;
+    }
+
+    .card-header h3 {
+        font-size: 1.3rem;
+    }
+
+    .card-header p {
+        font-size: 0.9rem;
+    }
+
+    /* Espacement réduit */
+    .card-body {
+        padding: 15px;
+    }
+
+    .form-label {
+        font-size: 0.9rem;
+    }
+
+    input, select, textarea {
+        font-size: 0.95rem;
+        padding: 10px;
+    }
+
+    /* Bouton plus gros et ergonomique */
+    #submitBtn {
+        font-size: 1rem;
+        padding: 14px;
+        border-radius: 6px;
+    }
+
+    /* Messages */
+    .alert {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+}
+
   </style>
 </head>
 <body>

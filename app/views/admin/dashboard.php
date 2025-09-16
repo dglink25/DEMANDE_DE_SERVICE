@@ -1,6 +1,54 @@
 <?php include __DIR__ . '/../layouts/header.php'; ?>
 <!-- <link rel="stylesheet" href="public/assets/css/style.css"> -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>/* ✅ Améliorations Mobile */
+@media (max-width: 576px) {
+    /* Les 4 cartes stats s'empilent proprement */
+    .col-md-3 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
 
+    .card {
+        margin-bottom: 15px;
+    }
+
+    /* Réduction de la taille du texte dans les cartes */
+    .card .card-text {
+        font-size: 1.4rem;
+    }
+
+    /* Tableau scrollable avec adaptation */
+    .table-responsive {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* Réduction taille du texte dans tableau */
+    table th, table td {
+        font-size: 0.85rem;
+        white-space: nowrap; /* évite la casse */
+    }
+
+    /* Les boutons prennent toute la largeur pour être cliquables au doigt */
+    .btn-sm {
+        padding: 8px 12px;
+        font-size: 0.8rem;
+        margin-bottom: 5px;
+        width: 100%; /* ✅ un bouton par ligne */
+    }
+
+    /* Modals bien ajustés */
+    .modal-dialog {
+        margin: 10px;
+        max-width: 95%;
+    }
+
+    .modal-body p {
+        font-size: 0.9rem;
+    }
+}
+</style>
 <?php
 $totalDemandes   = $requestModel->countByStatus();
 $approuve        = $requestModel->countByStatus('approuve');
@@ -137,7 +185,6 @@ $recentDemandes  = $requestModel->getRequests(null, 5);
                                         Rejeter
                                     </button>
 
-                                    <!-- Modal Rejeter -->
                                     <!-- Modal Rejeter -->
 <div class="modal fade" id="modalRejeter<?= $demande['id'] ?>" tabindex="-1">
     <div class="modal-dialog">

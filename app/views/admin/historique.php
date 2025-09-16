@@ -1,5 +1,79 @@
 <?php include __DIR__ . "/../layouts/header.php"; ?>
+<style>/* ✅ Amélioration affichage mobile */
+@media (max-width: 576px) {
+    main.container {
+        padding: 10px;
+    }
 
+    /* Carte plus compacte */
+    .card {
+        margin: 0 0 15px 0;
+        border-radius: 8px;
+    }
+
+    /* Tableau en mode bloc (plus lisible que scroll) */
+    .table-responsive {
+        border: none;
+    }
+
+    .table thead {
+        display: none; /* cacher l'en-tête du tableau */
+    }
+
+    .table tbody tr {
+        display: block;
+        margin-bottom: 15px;
+        background: #fff;
+        border-radius: 6px;
+        padding: 10px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+        text-align: left;
+    }
+
+    .table tbody td {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.9rem;
+        padding: 8px 5px;
+        border: none;
+    }
+
+    .table tbody td::before {
+        content: attr(data-label);
+        font-weight: 600;
+        color: #0056b3;
+        flex: 1;
+    }
+
+    .badge {
+        font-size: 0.8rem;
+        padding: 5px 8px;
+    }
+
+    .btn {
+        font-size: 0.8rem;
+        padding: 6px 10px;
+    }
+
+    /* Modal plein écran sur mobile */
+    .modal-dialog {
+        margin: 0;
+        max-width: 100%;
+        height: 100%;
+    }
+
+    .modal-content {
+        height: 100%;
+        border-radius: 0;
+    }
+
+    .modal-body {
+        font-size: 0.9rem;
+        overflow-y: auto;
+    }
+}
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <main class="container my-5">
     <div class="d-flex justify-content-between align-items-center mb-4">
         <h1 class="h3 text-primary fw-bold"> Historique des demandes</h1>

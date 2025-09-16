@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Connexion Admin - DGLINK</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Important pour mobile -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body, html {
@@ -10,35 +11,63 @@
             margin: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: url('public/images/logo1.png') no-repeat center center fixed;
-            background-size: 50%; /* taille du logo en arrière-plan */
-            background-color: #f0f2f5; /* couleur de fond pour contraste */
+            background-size: 100%; /* sur PC */
+            background-color: #f0f2f5;
         }
+
         .login-container {
             height: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
+            padding: 15px; /* espace sur mobile */
         }
+
         .login-card {
-            background-color: rgba(255, 255, 255, 0.2); /* transparent légèrement */
+            background-color: rgba(255, 255, 255, 0.9);
             padding: 30px;
             border-radius: 12px;
             box-shadow: 0 8px 20px rgba(0,0,0,0.3);
             width: 100%;
             max-width: 400px;
         }
+
         .login-card h2 {
             text-align: center;
             margin-bottom: 20px;
             color: #0056b3;
             font-weight: bold;
         }
+
         .btn-primary {
             background-color: #0056b3;
             border: none;
         }
+
         .btn-primary:hover {
             background-color: #003f80;
+        }
+
+        /* ✅ Amélioration Mobile */
+        @media (max-width: 576px) {
+            body {
+                background-size: cover; /* logo prend tout l’écran sur mobile */
+                background-position: center;
+            }
+
+            .login-card {
+                max-width: 100%; /* occupe presque tout l’écran */
+                padding: 20px;
+                border-radius: 8px;
+            }
+
+            .login-card h2 {
+                font-size: 1.4rem; /* texte réduit */
+            }
+
+            input, button {
+                font-size: 1rem; /* taille adaptée au doigt */
+            }
         }
     </style>
 </head>

@@ -1,5 +1,49 @@
 <?php include __DIR__ . '/../layouts/header.php'; ?>
+<style>/* ✅ Optimisation mobile */
+@media (max-width: 576px) {
+    .container {
+        padding: 10px;
+    }
 
+    h1.h3 {
+        font-size: 1.3rem;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    /* Champs du formulaire */
+    .form-label {
+        font-size: 0.9rem;
+        font-weight: 600;
+    }
+
+    .form-control {
+        font-size: 0.95rem;
+        padding: 10px;
+        border-radius: 8px;
+    }
+
+    /* Espacement entre champs */
+    .mb-3 {
+        margin-bottom: 1.2rem !important;
+    }
+
+    /* Bouton principal */
+    .btn-primary {
+        width: 100%;
+        font-size: 1rem;
+        padding: 12px;
+        border-radius: 8px;
+    }
+
+    /* Alertes lisibles */
+    .alert {
+        font-size: 0.9rem;
+        padding: 10px;
+        text-align: center;
+    }
+}
+</style>
 <?php
 // Vérifier si l’admin est connecté
 if (!isset($_SESSION['admin_id'])) {
@@ -7,7 +51,7 @@ if (!isset($_SESSION['admin_id'])) {
     exit;
 }
 ?>
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <div class="container mt-4">
      <div class="d-flex justify-content-between align-items-center mb-4">
         <h1 class="h3 text-primary fw-bold"> Paramètres du compte</h1>
